@@ -1,27 +1,27 @@
 ---
-description: JSTQB認定に向けた客観的な評価を行うための採点基準（100点満点）を定義します。
+description: JSTQB AL TA 認定およびAI駆動テストマネージャー候補としての評価基準（100点満点）
 ---
 
-# Scoring Algorithm (JSTQB FL Candidate Level)
-評価はシラバスへの「準拠度」と「論理性」を基準とする。
+# Scoring Algorithm (AL TA / QA Architect Level)
+評価は知識の暗記（K1/K2）ではなく、「与えられた状況下での最適解の導出」「コストとリスクのバランス（K3/K4）」を基準とする。
 
-## 1. Terminology Accuracy (40pts)
-**専門用語の正確な使用と定義の理解**
-* [cite_start]**Critical Error (-10pts/回)**: 「エラー」「欠陥」「故障」を明確に使い分けられていない [cite: 285, 286]。
-* [cite_start]**Term Misuse (-5pts/回)**: 「品質保証(QA)」と「品質コントロール(QC)」の混同など、シラバス定義に反する解釈 [cite: 280, 281, 282]。
+## 1. Advanced Analytical Proficiency (40pts)
+**シナリオ空間の分析と最適技法の選択（K4レベル）**
+* [cite_start]**Suboptimal Analysis (-10pts/回)**: テストカバレッジは満たせるが、テストケース数が無駄に膨張する非効率な技法（例：ペアワイズが最適な場面で全網羅を提案等）を選択 [cite: AL-TA-Chap3]。
+* [cite_start]**Context Ignorance (-15pts/回)**: シナリオに明記された「納期逼迫」「人命に関わるシステム」といったコンテキスト（リスク）を無視した判断 [cite: AL-TA-Chap2]。
 
-## 2. Principle Application (30pts)
-**テストの原則とSDLCの理解（K2/K3レベル）**
-* [cite_start]**Logic Error (-10pts/回)**: 「全数テストが可能である」といった、テストの7原則に反する主張 [cite: 300]。
-* [cite_start]**Context Ignore (-5pts/回)**: テスト対象のコンテキスト（アジャイルかウォーターフォールか等）を無視した画一的な解答 [cite: 449, 458]。
+## 2. Terminology & Conceptual Precision (30pts)
+**高度な専門用語とプロセスの正確な理解**
+* [cite_start]**Technique Misunderstanding (-10pts/回)**: 「状態遷移表のNスイッチカバレッジ」や「ドメイン分析のOn/Offポイント」といったAL TA固有の定義ミス。
+* [cite_start]**Review Perspective Loss (-5pts/回)**: 動的テストと静的テスト（パースペクティブベースドレビュー等）の使い分けや役割の混同。
 
-## 3. Analysis Proficiency (30pts)
-**シナリオ分析と問題解決スキル**
-* [cite_start]**Missed Phase (-10pts/回)**: シフトレフトの概念を理解せず、SDLCの後期でのみテストを提案する [cite: 503, 504]。
-* [cite_start]**Confidence (+5pts)**: シラバスの特定の章節（例：「早期テストの原則に従い〜」）を根拠として明示的に引用できた場合の加点 [cite: 301]。
+## 3. Automation & AI-Readiness (30pts)
+**将来を見据えた自動化・AI統合への柔軟性（加点方式）**
+* [cite_start]**Structured Design (+10pts)**: テストケースや要件の分析結果が、そのままGherkin形式（BDD）やAIへのプロンプトとして利用可能なほど構造化・標準化されている。
+* [cite_start]**Risk Mitigation for Automation (+10pts)**: 「この部分は自動化・AI化に向かない」という判断を、テスト容易性（Testability）の観点から論理的に指摘できている。
 
 ## 4. Total Score Definitions
-* **S (90-100)**: FL試験合格確実。実務でもテストリーダーとして正しい用語で議論できる。
-* **A (75-89)**: 基礎を習得しており、試験合格圏内。
-* **B (60-74)**: 概念は理解しているが、用語の定義が甘い、または一般常識で解答している。
-* **C (0-59)**: シラバス（K1レベル）の再読込みが必要。
+* **S (90-100)**: AL TA合格確実レベル。かつ、明日にでもAIを活用したプロセス改善をリードできるQAアーキテクト水準。
+* **A (75-89)**: 高度な分析能力を備えており、AL試験の合格圏内。
+* **B (60-74)**: 技法の知識はあるが、複合的なシナリオ問題での「引き出しの選択（分析）」に迷いがある。
+* **C (0-59)**: FLの知識に引きずられており、ALの「コンテキストに応じた判断（K4）」へのマインドシフトが必要。
